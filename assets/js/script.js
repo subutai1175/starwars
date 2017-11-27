@@ -1,9 +1,24 @@
-var container = new Vue ({
+new Vue ({
 
-  el: "#container",
+  el: ".container",
   data: {
     message: "Hello World!"
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
