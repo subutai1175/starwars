@@ -1,0 +1,27 @@
+
+@font-face {
+    font-family: "Star Jedi", sans-serif;
+    src: url("./assets/fonts/Starjedi.ttf") format("truetype");
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Star Jedi", sans-serif;
+  background-image: url("/assets/img/star-wars-wallpapers.jpg");
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000;
+}
+
+.header {
+  text-align: center;
+}
+
+.character {
+  text-align: center;
+}
