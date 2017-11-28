@@ -1,15 +1,18 @@
-
 @font-face {
+  font-family: "Star Hollow", sans-serif;
+  src: url("./assets/fonts/Starjhol.ttf") format("truetype");
+}
+
+/*@font-face {
     font-family: "Star Jedi", sans-serif;
     src: url("./assets/fonts/Starjedi.ttf") format("truetype");
-}
+}*/
 
 html, body {
   height: 100%;
 }
 
 body {
-  font-family: "Star Jedi", sans-serif;
   background-image: url("/assets/img/star-wars-wallpapers.jpg");
   background-position: center center;
   background-repeat:  no-repeat;
@@ -18,10 +21,27 @@ body {
   background-color: #000;
 }
 
-.header {
+.header1 {
+  font-family: "Star Hollow";
+  /*color: gold;*/
   text-align: center;
+  /*font-size: 4rem;*/
+  /*text-shadow: .4px .4px .7px #000;*/
+}
+
+.header2 {
+  font-family: "Star Hollow";
+  /*color: gold;*/
+  text-align: center;
+  /*font-size: 4rem;*/
+  /*text-shadow: .4px .4px .7px #000;*/
 }
 
 .character {
+  font-family: "Star Jedi";
   text-align: center;
+  color: gold;
+  text-align: center;
+  font-size: 1rem;
+  text-shadow: .4px .4px .7px #000;
 }

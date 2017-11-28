@@ -2,8 +2,9 @@ new Vue ({
 
   el: ".container",
   data: {
-    header: "Star Wars",
-    message: "Hello World!"
+    header1: "Star",
+    header2: "Wars",
+    message: "The Force Awakens",
   },
 
   methods: {
