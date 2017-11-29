@@ -1,3 +1,8 @@
+$(document).ready(function () {
+$('body').css({'background-image': 'url(' + "/assets/img/star-wars-wallpapers.jpg" + ')'});
+});
+
+
 var vue
 var ranChar = "";
 var homeworld = "";
