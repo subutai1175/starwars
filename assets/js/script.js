@@ -1,5 +1,5 @@
 $(document).ready(function () {
-$('body').css({'background-image': 'url(' + "/assets/img/star-wars-wallpapers.jpg" + ')'});
+$('body').css({'background-image': 'url(/assets/img/star-wars-wallpapers.jpg)'});
 });
 
 
