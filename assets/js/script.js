@@ -1,21 +1,40 @@
+var vue
 var ranChar = "";
+var homeworld = "";
+var species = "";
 
 axios.get("https://swapi.co/api/films/7/") // Call the fetch function passing the url of the API as a parameter
 .then(response => {
   let characters = response.data.characters
-  ranChar = characters[Math.floor(Math.random() * characters.length)]
-
+  function ranIndex (min, max) {
+    var num = Math.floor(Math.random() * (max - min))
+    // exclude index position 5
+    if (num === 5) num++
+    return num
+  }
+  ranChar = characters[ranIndex(0, characters.length)]
+  // characters[Math.floor(Math.random() * characters.length)];
 axios.get(ranChar)
 .then(response => {
-    console.log("response2", response)
   let charInfo = response.data
-  console.log("charInfo", charInfo)
-  .then(function(response) {
-    console.log("response3", response)
-    new Vue ({
+  homeworld = charInfo.homeworld
+  species = charInfo.species
+  axios.get(homeworld)
+  .then(response => {
+    vue.homeworld = response.data
+  })
+  axios.get(species)
+  .then(response => {
+    vue.species = response.data
+  })
+  vue = new Vue ({
 
       el: ".container",
       data: {
+        random: ranChar,
+        charInfo: charInfo,
+        homeworld: '',
+        species: '',
         header1: "Star",
         header2: "Wars",
         message: "The Force Awakens",
@@ -63,7 +82,6 @@ axios.get(ranChar)
       ]
       }
   })
-})
 })
 .catch(function(err) {
     console.log(err)// This is where you run code if the server returns any errors
