@@ -17,8 +17,12 @@ axios.get("https://swapi.co/api/films/7/") // Call the fetch function passing th
 axios.get(ranChar)
 .then(response => {
   let charInfo = response.data
+  console.log(charInfo)
   homeworld = charInfo.homeworld
   species = charInfo.species
+  filmOne = charInfo.films[0]
+  vehicle = charInfo.vehicles[0]
+  starship = charInfo.starships[0]
   axios.get(homeworld)
   .then(response => {
     vue.homeworld = response.data
@@ -27,14 +31,29 @@ axios.get(ranChar)
   .then(response => {
     vue.species = response.data
   })
+  axios.get(filmOne)
+  .then(response => {
+    vue.filmOne = response.data
+  })
+  axios.get(vehicle)
+  .then(response => {
+    vue.vehicle = response.data
+  })
+  axios.get(starship)
+  .then(response => {
+    vue.starship = response.data
+  })
   vue = new Vue ({
 
       el: ".container",
       data: {
         random: ranChar,
         charInfo: charInfo,
-        homeworld: '',
-        species: '',
+        homeworld: "",
+        species: "",
+        filmOne: "",
+        vehicle: "",
+        starship: "",
         header1: "Star",
         header2: "Wars",
         message: "The Force Awakens",
